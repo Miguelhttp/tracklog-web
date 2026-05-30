@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --theme-page: #f8fafc;
+  --theme-card: #ffffff;
+  --theme-surface: #f8fafc;
+  --theme-border: #e2e8f0;
+  --theme-text-primary: #1e293b;
+  --theme-text-secondary: #64748b;
+  --theme-text-muted: #94a3b8;
+  --theme-sidebar: #0f172a;
+  --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04), 0 1px 3px 0 rgb(15 23 42 / 0.06);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --theme-page: #0f172a;
+  --theme-card: #1e293b;
+  --theme-surface: #1e293b;
+  --theme-border: rgb(255 255 255 / 0.08);
+  --theme-text-primary: #f1f5f9;
+  --theme-text-secondary: #94a3b8;
+  --theme-text-muted: #64748b;
+  --theme-sidebar: #020617;
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.2), 0 1px 3px 0 rgb(0 0 0 / 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Escala tipográfica */
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 22px;
+  --text-3xl: 32px;
+  --text-4xl: 36px;
+
+  /* Pesos */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /* Tokens semânticos (light/dark via CSS variables) */
+  --color-page: var(--theme-page);
+  --color-card: var(--theme-card);
+  --color-surface: var(--theme-surface);
+  --color-border-default: var(--theme-border);
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-text-muted: var(--theme-text-muted);
+  --color-brand-sidebar: var(--theme-sidebar);
+
+  /* Cores principais */
+  --color-brand-accent: #2563eb;
+  --color-brand-accent-light: #eff6ff;
+
+  /* Slate scale */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  /* Blue */
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+
+  /* Status badges — light */
+  --color-status-pending-bg: #faeeda;
+  --color-status-pending-text: #633806;
+  --color-status-pending-accent: #d97706;
+  --color-status-transit-bg: #e6f1fb;
+  --color-status-transit-text: #0c447c;
+  --color-status-transit-accent: #2563eb;
+  --color-status-delivered-bg: #eaf3de;
+  --color-status-delivered-text: #27500a;
+  --color-status-delivered-accent: #16a34a;
+  --color-status-failed-bg: #fcebeb;
+  --color-status-failed-text: #791f1f;
+  --color-status-failed-accent: #dc2626;
+
+  /* Border radius */
+  --radius-card: 12px;
+  --radius-badge: 999px;
+}
+
+@layer utilities {
+  .login-panel-pattern {
+    background-image: radial-gradient(
+      circle,
+      rgb(148 163 184 / 0.12) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply font-sans text-base text-text-primary bg-page antialiased transition-colors duration-200;
+  }
 }
