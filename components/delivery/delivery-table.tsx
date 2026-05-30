@@ -59,7 +59,7 @@ export function DeliveryTable({ deliveries }: DeliveryTableProps) {
           >
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
-                <p className="font-mono text-sm font-medium text-slate-900 dark:text-slate-100">
+                <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
                   {delivery.code}
                 </p>
                 <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 truncate">
@@ -110,7 +110,7 @@ export function DeliveryTable({ deliveries }: DeliveryTableProps) {
                     : "bg-white dark:bg-slate-800"
                 }`}
               >
-                <td className="px-5 font-mono text-sm font-medium text-slate-900 dark:text-slate-100">
+                <td className="px-5 text-sm font-medium text-slate-900 dark:text-slate-100">
                   {delivery.code}
                 </td>
                 <td className="px-5 text-slate-700 dark:text-slate-300">

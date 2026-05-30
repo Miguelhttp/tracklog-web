@@ -43,7 +43,7 @@ export default async function DeliveryDetailPage({
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h1 className="font-mono text-2xl font-medium text-slate-900 dark:text-slate-100">
+          <h1 className="text-2xl font-medium text-slate-900 dark:text-slate-100">
             {delivery.code}
           </h1>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
@@ -57,7 +57,7 @@ export default async function DeliveryDetailPage({
         <Badge status={delivery.status} size="lg" />
       </div>
 
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-[var(--shadow-card)] p-5 transition-colors duration-200">
+      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-(--shadow-card) p-5 transition-colors duration-200">
         <h2 className="text-[11px] font-medium uppercase tracking-[0.06em] text-slate-500 dark:text-slate-400 mb-5">
           Informações da entrega
         </h2>
@@ -75,7 +75,7 @@ export default async function DeliveryDetailPage({
         </dl>
       </div>
 
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-[var(--shadow-card)] overflow-hidden transition-colors duration-200">
+      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-(--shadow-card) overflow-hidden transition-colors duration-200">
         <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
           <h2 className="text-sm font-medium text-slate-900 dark:text-slate-100">
             Histórico de eventos

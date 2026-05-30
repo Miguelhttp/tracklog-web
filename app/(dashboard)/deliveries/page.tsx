@@ -32,7 +32,7 @@ export default async function DeliveriesPage({
         <DeliveryFilters />
       </Suspense>
 
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-[var(--shadow-card)] overflow-hidden transition-colors duration-200">
+      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-(--shadow-card) overflow-hidden transition-colors duration-200">
         <DeliveryTable deliveries={deliveries} />
       </div>
     </div>

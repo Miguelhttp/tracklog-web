@@ -67,7 +67,7 @@ export default async function DashboardPage() {
           return (
             <div
               key={status}
-              className="relative overflow-hidden bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 p-5 shadow-[var(--shadow-card)] transition-colors duration-200"
+              className="relative overflow-hidden bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 p-5 shadow-(--shadow-card) transition-colors duration-200"
             >
               <span
                 className={`absolute left-0 top-0 bottom-0 w-1 ${metricAccent[status]}`}
@@ -90,7 +90,7 @@ export default async function DashboardPage() {
         })}
       </div>
 
-      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-[var(--shadow-card)] transition-colors duration-200">
+      <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-(--shadow-card) transition-colors duration-200">
         <div className="px-5 py-4 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between gap-4">
           <div>
             <h2 className="text-sm font-medium text-slate-900 dark:text-slate-100">
@@ -121,7 +121,7 @@ export default async function DashboardPage() {
                 className="px-5 py-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors duration-200"
               >
                 <div className="min-w-0">
-                  <p className="font-mono text-sm font-medium text-slate-900 dark:text-slate-100">
+                  <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
                     {delivery.code}
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 truncate">

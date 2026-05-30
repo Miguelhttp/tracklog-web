@@ -56,8 +56,8 @@ export function Sidebar() {
                   href={item.href}
                   className={`flex items-center gap-2.5 py-2.5 pl-3 pr-3 text-sm font-medium transition-colors duration-200 ${
                     isActive
-                      ? "border-l-2 border-blue-500 bg-white/[0.08] text-white"
-                      : "border-l-2 border-transparent text-slate-400 hover:bg-white/[0.04] hover:text-slate-200 dark:text-slate-400 dark:hover:text-slate-200"
+                      ? "border-l-2 border-blue-500 bg-white/8 text-white"
+                      : "border-l-2 border-transparent text-slate-400 hover:bg-white/4 hover:text-slate-200 dark:text-slate-400 dark:hover:text-slate-200"
                   }`}
                 >
                   <Icon size={16} strokeWidth={2} aria-hidden="true" />
